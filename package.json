@@ -1,0 +1,28 @@
+{
+  "name": "givengrub",
+  "version": "1.0.0",
+  "description": "Food Provider and Non profit organization",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moshkim/GiveNGrub.git"
+  },
+  "author": "MoMo Group",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Moshkim/GiveNGrub/issues"
+  },
+  "homepage": "https://github.com/Moshkim/GiveNGrub#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "google-map-marker": "^1.2.3",
+    "moment": "^2.20.1",
+    "mysql2": "^1.5.1",
+    "sequelize": "^4.32.2"
+  }
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE>
+
+<html>
+<title>Food Provider</title>
+
+<head>
+
+    <title>The Materialize Example</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family = Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
+
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background-size: auto;
+            background: url("images/six.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        #add {
+            background-color: #d84315;
+        }
+
+        /* label focus color */
+
+        .input-field input[type=number]:focus+label {
+            color: #d84315;
+        }
+
+        /* label underline focus color */
+
+        .input-field input[type=number]:focus {
+            border-bottom: 1px solid #d84315;
+            box-shadow: 0 1px 0 0 #d84315;
+        }
+
+        /* label focus color */
+
+        .input-field input[type=text]:focus+label {
+            color: #d84315;
+        }
+
+        /* label underline focus color */
+
+        .input-field textarea[type=text]:focus {
+            border-bottom: 1px solid #d84315;
+            box-shadow: 0 1px 0 0 #d84315;
+        }
+
+        #topPanel {
+            margin-top: 120px
+        }
+
+        #panel {
+            margin: 0 auto 0 auto;
+            max-width: 60%;
+        }
+
+        thead,
+        tbody {
+            display: block;
+        }
+
+        tbody td,
+        thead th {
+            width: 5%;
+            19% is less than (100% / 5 cols)=20% float: left;
+        }
+
+        .navbar {
+            position: fixed;
+            line-height: 110px;
+            height: 135px;  /*change this one*/
+            padding-top: 0;
+            margin-bottom: 0;
+            background-color: #2d2d30;
+            border: 0;
+            font-size: 55px !important;
+            letter-spacing: 12px;
+            opacity: 0.9;
+            font-family: 'Hind Siliguri', sans-serif';
+
+        }
+        .container3 img{
+    width: 70%;
+    height: 100%;   /*change this one*/
+}
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header" align="center">
+                <div class="container3">
+                    <div style="text-align: center; display: inline-block;">
+                        <img src="images/Logo3.png" id="logo" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Food list -->
+
+    <div class="section" id="panel">
+        <div class="card-panel" id="topPanel">
+            <h4>Submit New Contribution</h4>
+            <h6>Please enter a whole number (or 0 if none).</h6>
+            <br>
+            <div class="row">
+                <form id="addFoodForm">
+                    <div class="col s12">
+                        <div class="row col s3" id="selectQuantity">
+                            <h5>Fresh</h5>
+                            <div class="input-field">
+                                <input id="fresh" placeholder="- -" type="number">
+                            </div>
+                        </div>
+                        <div class="row col s3">
+                            <h5>Frozen</h5>
+                            <div class="input-field">
+                                <input id="frozen" placeholder="- -" type="number">
+                            </div>
+                        </div>
+
+                        <div class="row col s3">
+                            <h5>Packaged</h5>
+                            <div class="input-field">
+                                <input id="packaged" placeholder="- -" type="number">
+                            </div>
+                        </div>
+                        <div class="row col s3">
+                            <h5>Canned</h5>
+                            <div class="input-field">
+                                <input id="canned" placeholder="- -" type="number">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row col s12">
+                        <h5>Description</h5>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea type="text" id="description" class="materialize-textarea" placeholder="e.g. bananas, tomatoes, beef, etc."></textarea>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="col s12" align="center">
+                <button type="submit" class="btn btn-default" id="add">Add</button>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Recent submissions-->
+    <div class="section" id="panel">
+        <div class="card-panel" id="addNew">
+            <!--Added id for margin-->
+            <h4>Your Donations</h4>
+            <table class="centered">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <!--Changed order -->
+                        <th>Date</th>
+                        <th>Fresh</th>
+                        <th>Frozen</th>
+                        <th>Packaged</th>
+                        <th>Canned</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody id="submitNewList">
+                    <!--Push new items to id-->
+
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="js/foodprovider.js"></script>
+
+</body>
+
+</html>

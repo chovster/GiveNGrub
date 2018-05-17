@@ -1,0 +1,187 @@
+<!DOCTYPE>
+
+<html>
+<title>Sign-Up</title>
+
+<head>
+
+    <title>The Materialize Example</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family = Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="signin.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
+
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background-size: auto;
+            background: url("../views/images/one.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        #signin:hover {
+            display: block;
+            opacity: 0.9;
+        }
+
+        #signin {
+            margin-bottom: -15%;
+        }
+
+        /* Create two equal columns that floats next to each other */
+
+        .column {
+            margin: 10% 0 0 0;   /*change this one*/
+            background-color: white;
+            opacity: 0.9;
+            float: left;
+            width: 50%;
+            padding: 20px;
+            height: 77%;
+            /* Should be removed. Only for demonstration */
+        }
+        .navbar {
+            line-height: 110px;
+            height: 155px;
+            /* change this one*/
+            padding-top: 0;
+            margin-bottom: 0;
+            background-color: #2d2d30;
+            border: 0;
+            font-size: 55px !important;
+            letter-spacing: 12px;
+            opacity: 0.9;
+            font-family: 'Hind Siliguri', sans-serif';
+        }
+        #submit {
+            margin: -24% 0 0 0;
+            background-color: #d84315;
+        }
+
+        .container3 img{
+            width: 70%;
+            height: 90%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header" align="center">
+                        <div class="container3">
+                            <div style="text-align: center; display: inline-block;">
+                                <img src="images/Logo3.png" id="logo" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        <div class="container">
+              
+            <!-- Sign up form -->
+            <div class="row">
+                <div class="container" id="background">
+                    <div class="column">
+                        <p>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="username" type="text" class="validate">
+                                    <label for="username">Username</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="email" type="text" class="validate">
+                                    <label for="email">Email</label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <input id="password" type="text" class="validate">
+                                    <label for="password">Password</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="organization" type="text" class="validate">
+                                    <label for="organization">Organization</label>
+                                </div>
+                            </div>
+                        </p>
+                        <select>
+                            <option value="" disabled selected>Select Entity</option>
+                            <option value="1">Food Provider (Grocers, Restaurants, etc.)</option>
+                            <option value="2">Non-Profit Organization (Soup Kitchens, Charities, etc.)</option>
+                        </select>
+                        <label>Entity</label>
+                    </div>
+
+                    <div class="column">
+
+                        <p>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="address" type="text" class="validate">
+                                    <label for="address">Address</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="city" type="text" class="validate">
+                                    <label for="city">City</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="state" type="text" class="validate">
+                                    <label for="state">State</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="zip_code" type="number" class="validate">
+                                    <label for="zip_code">Zip Code</label>
+                                </div>
+                            </div>
+                        </p>
+
+                        <div id="blank">
+                            <select id="movingCapacity">
+                                <option value="" disabled selected>Select Capacity</option>
+                                <option value="1">1-25 People</option>
+                                <option value="2">26-50 People</option>
+                                <option value="3">51-100 People</option>
+                            </select>
+                            <label>Capacity</label>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div align="center">
+                            <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Submit
+                                <i class="material-icons right"></i>
+                                <br>
+                            </button>
+                            <div id="signin" style: "margin-top: -10%">
+
+                                <a href="signin.html">Already have an account? Sign In</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/signup.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAojVYS1ZjEju1PAaGMBUDTfeasKs8JchU&v=3.exp&sensor=false"></script>
+        <!--
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+    -->
+</body>
+
+</html>

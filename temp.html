@@ -1,0 +1,641 @@
+
+
+
+
+This is Food Provider!!!!
+
+
+<!DOCTYPE>
+
+<html>
+<title>Food Provider</title>
+
+<head>
+    
+    <title>The Materialize Example</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family = Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
+    
+    <style>
+        body {
+            background-color: rgb(238, 235, 235);
+            /*font-family: 'Indie Flower';*/
+        }
+        #sectionOne {
+            margin: 0 auto 0 auto;
+            max-width: 70%;
+            
+        }
+        p {
+            float: left;
+            margin: 0 3%;
+        }
+        /*
+        #scrollData{
+            width: 700x;
+            height: 100px;
+            overflow: scroll;
+        }*/
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(133, 136, 132);
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: #111;
+        }
+        .card-panel {
+            border-radius: 25px;
+        }
+        nav {
+            position: fixed;
+        }
+       
+        thead, tbody { 
+            display: block;  /* Need to fix format of table data */
+        }
+        
+        
+        tbody td, thead th {
+            width: 5%;  19% is less than (100% / 5 cols) = 20%
+            float: left;
+        }
+        h4 {
+            
+        }
+        #selectQuantity {      /* Need to align horizantally*/
+            float: left;
+        }
+        
+    </style>
+    
+</head>
+
+<body>
+    
+    <!-- Recent submissions-->
+    <div class="section" id="sectionOne">
+        <div class="card-panel" id="addNew">  <!--Added id for margin-->
+            <h4>Recent Submissions</h4>
+            <table class="centered">  
+                <thead>
+                    <tr>
+                        <th>Status</th>  <!--Changed order -->
+                        <th>Date</th>
+                        <th>Fresh</th>
+                        <th>Frozen</th>
+                        <th>Packaged</th>
+                        <th>Canned</th>
+                        <th>Description</th> 
+                    </tr>
+                </thead>
+                
+                <tbody id="submitNewList">         <!--Push new items to id-->
+                    
+                    
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+    
+    
+    <!-- Food list -->
+    
+    <div class="section" id="sectionOne">
+        <div class="card-panel">
+            <h4>Add New</h4>
+            <h6>Please enter a whole number (or 0 if none)</h6>  <!--Removed placeholder-->
+            <div class="row">
+                <form class="col s12" id="addFoodForm">
+                    <div class="row col s3" id="selectQuantity">
+                        <h5>Fresh</h5>
+                        <div class="input-field">
+                            <input id="fresh" placeholder="--" type="number">
+                        </div>
+                    </div>
+                    <div class="row col s3">
+                        <h5>Frozen</h5>
+                        <div class="input-field">
+                            <input id="frozen" placeholder="--" type="number">
+                        </div>
+                    </div>
+                    
+                    <div class="row col s3"> 
+                        <h5>Packaged</h5>
+                        <div class="input-field">
+                            <input id="packaged" placeholder="--" type="number">
+                        </div>
+                    </div>
+                    <div class="row col s3">
+                        <h5>Canned</h5>
+                        <div class="input-field">
+                            <input id="canned" placeholder="--" type="number">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row col s12">
+                        <h5>Description</h5>
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="description" class="materialize-textarea" placeholder="e.g. bananas, tomatoes, beef, etc."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12" align="center">
+                        <button type="submit" class="btn btn-default"  id="add">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<footer>
+    <!-- ?? -->
+</footer>
+
+<!-- Submit new-->
+<!-- after clicking add, this should take it to the adding html page-->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script type="text/javascript" src="js/foodprovider.js"></script>
+
+
+</body>
+
+</html>
+
+
+
+This is non profit page!!!!
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Avail for pickup | GiveNGrub</title>
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+        
+        .containerTitle {
+            /*font-family: 'Indie Flower';*/
+            text-align: center;
+            margin: 5% auto 0 auto;
+        }
+        
+        #map {
+            margin: 0 auto 0 auto;
+            height: 400px;
+            max-width: 70%;
+        }
+        #resize {
+            float: center;
+            max-width: 70%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        /* html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        } */
+        #results {
+            margin: auto;
+            max-width: 100%;
+        }
+        body {
+            background-color: rgb(238, 235, 235);
+            text-shadow: 2px 2px 5px rgb(233, 226, 226);
+            /*font-family: 'Indie Flower';*/
+        }
+        /*
+        .map {
+            border-radius: 25px;
+        }*/
+        #data {
+            max-width: 76%;  
+        }
+        ul li {
+            background-color: white;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    
+    <div>
+        <h1 id="name" class="containerTitle"></h1>
+    </div>
+    
+    <div class="containerTitle">
+        <h3>Locations for Pick-Up</h2>
+        </div>
+        
+        
+        <div class="row">
+            <div class="col s7">
+                <div class="map" id="map">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col s5">
+                    <ul class = "collapsible popout" data-collapsible = "accordion" id="data"></ul>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="container" id="resize">
+            <div class="col s7" id="grabLists"></div>
+        </div>
+        
+        
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBDIgfM9PCnLI_koxi20OA2EqB_8yKiu4&callback=initMap"></script>
+        <script type="text/javascript" src="js/nonprofit.js"></script> 
+        
+    </body>
+    
+    </html>
+
+
+
+
+
+
+
+    this is signup page!!!
+
+
+
+
+
+
+<!DOCTYPE>
+
+<html>
+<title>Signin</title>
+
+<head>
+    
+    <title>The Materialize Example</title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+    <link rel = "stylesheet"
+    href = "https://fonts.googleapis.com/icon?family = Material+Icons">
+    <link rel = "stylesheet"
+    href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>           
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>    
+    
+    <style>
+        
+        #signin {
+            margin: 36% auto auto 1%;
+            /*max-width: 45%;
+            max-height: 45%;*/
+            background-color: rgb(255, 255, 255, 0);
+            opacity: 0.6;
+        }
+        
+        #signin:hover {
+            display: block;
+            opacity: 0.9;
+        }
+        
+        .containerTitle {
+            font-family: 'Indie Flower';
+            font-size: 200%;
+            text-align: left;
+            margin: 0% 0 -37% 0;
+        }
+        
+        body {
+            height: 100%;
+            width: 100%;
+            background-size: 100%;
+            background-image: url('https://diversity.unc.edu/files/2017/07/give_-donate_-charity-518141776_1258x838_720cropped.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        /* .containerOne {
+            font-family: 'Indie Flower';
+        } */
+        
+        p1 {
+            font-size: 175%;
+        }
+        
+        text {
+            font-family: 'Indie Flower';
+            font-size: 500%;
+            /* margin: -15% 0 0 0; */
+        }
+        
+        #right {
+            float: right;
+            margin-top: -42%
+        }
+        
+        #left {
+            float: left;
+        }
+    </style>
+    
+</head>
+
+
+
+<body>
+    
+    <div class="container">
+        <div class="containerTitle">
+            <text>GiveNGrub</text>
+        </div>
+        <div class="card-panel" id="signin">
+            <div class = "row">
+                <form class="col s12">
+                    <div class="row">
+                        <p><strong>Create a New Account</strong><p>
+                            
+                            <div class="input-field col s12">
+                                <input id="username" type="text" class="validate">
+                                <label for="username">Username</label>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="text" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" type="text" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="organization" type="text" class="validate">
+                                <label for="organization">Organization</label>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="maincontact" type="text" class="validate">
+                                <label for="maincontact">Main Contact</label>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="address" type="text" class="validate">
+                                <label for="address">Address</label>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="input-field col s4">
+                                <input id="city" type="text" class="validate">
+                                <label for="city">City</label>
+                            </div>
+                            
+                            <div class="input-field col s4">
+                                <input id="state" type="text" class="validate">
+                                <label for="state">State</label>
+                            </div>
+                            
+                            <div class="input-field col s4">
+                                <input id="zip_code" type="number" class="validate">
+                                <label for="zip_code">Zip Code</label>
+                            </div>
+                        </div>
+                        <br>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select id="entity">
+                                    <option value="" disabled selected>Entity</option>
+                                    <option value="FP">Food Provider (Grocers, Restaurants, etc.)</option>
+                                    <option value="NP">Non-Profit Organization (Soup Kitchens, Charities, etc.)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select id="capacity">
+                                    <option value="" disabled selected>Select Capacity</option>
+                                    <option value="25">1-25 People</option>
+                                    <option value="50">26-50 People</option>
+                                    <option value="100">51-100 People</option>
+                                </select>
+                                <label>Capacity</label>
+                            </div>
+                        </div>
+                        
+                        <div align="center">
+                            <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Submit
+                                <i class="material-icons right"></i>
+                            </button>
+                            <div class="row">
+                                <br>
+                                <a href="signin.html">Already have account? Sign In</a>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="js/signup.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAojVYS1ZjEju1PAaGMBUDTfeasKs8JchU&v=3.exp&sensor=false"></script>
+        
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+this is sign in page
+
+
+
+
+
+    
+    
+<!DOCTYPE>
+    
+<html>
+<title>Signin</title>
+
+<head>
+    
+    <title>The Materialize Example</title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+    <link rel = "stylesheet"
+    href = "https://fonts.googleapis.com/icon?family = Material+Icons">
+    <link rel = "stylesheet"
+    href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>           
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>    
+    
+    <style>
+        
+        #signin {
+            margin: 36% auto auto 1%;
+            /*max-width: 45%;
+            max-height: 45%;*/
+            background-color: rgb(255, 255, 255, 0);
+            opacity: 0.6;
+        }
+        
+        #signin:hover {
+            display: block;
+            opacity: 0.9;
+        }
+        
+        .containerTitle {
+            font-family: 'Indie Flower';
+            font-size: 200%;
+            text-align: left;
+            margin: 0% 0 -37% 0;
+        }
+        
+        body {
+            height: 100%;
+            width: 100%;
+            background-size: 100%;
+            background-image: url('https://diversity.unc.edu/files/2017/07/give_-donate_-charity-518141776_1258x838_720cropped.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        /* .containerOne {
+            font-family: 'Indie Flower';
+        } */
+        
+        p1 {
+            font-size: 175%;
+        }
+        
+        text {
+            font-family: 'Indie Flower';
+            font-size: 500%;
+            /* margin: -15% 0 0 0; */
+        }
+        
+        #right {
+            float: right;
+            margin-top: -42%
+        }
+        
+        #left {
+            float: left;
+        }
+    </style>
+    
+</head>
+
+
+
+<body>
+    
+    <div class="container">
+        <div class="containerTitle">
+            <p>GiveNGrub</p>
+        </div>
+        <div class="card-panel" id="signin">
+            <div class = "row">
+                <form class = "col s12">
+                    <div class = "row">
+                        
+                        <div class = "input-field col s12">
+                            <input placeholder = "Email" value = "" id = "email"
+                            type = "text" class = "active validate" required />
+                            <label for = "email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class = "input-field col s12">      
+                            <label for = "password">Password</label>
+                            <input id = "password" type = "password" placeholder = "Password"
+                            class = "validate" required />          
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="row" align="center">
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Submit
+                    <i class="material-icons right"></i>
+                </button>
+                <div class="row">
+                    <br>
+                    <a href="signup.html">New user? Register Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="js/signin.js"></script>  
+    
+</body>
+
+</html>

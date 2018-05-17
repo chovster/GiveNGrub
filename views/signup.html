@@ -1,0 +1,233 @@
+<!DOCTYPE>
+
+
+<html>
+<title>Signup</title>
+
+<head>
+
+    <title>The Materialize Example</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family = Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="signin.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
+
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background-size: contain;
+            background: url("images/one.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        #signin:hover {
+            display: block;
+            opacity: 0.9;
+        }
+
+        /* label focus color */
+
+        .input-field input[type=text]:focus+label {
+            color: #d84315;
+        }
+
+        /* label focus color */
+
+        .input-field input[type=number]:focus+label {
+            color: #d84315;
+        }
+
+        /* label underline focus color */
+
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #d84315;
+            box-shadow: 0 1px 0 0 #d84315;
+        }
+
+        .input-field input[type=number]:focus {
+            border-bottom: 1px solid #d84315;
+            box-shadow: 0 1px 0 0 #d84315;
+        }
+
+        ul.dropdown-content.select-dropdown li span {
+            color: #d84315;
+            /* no need for !important :) */
+        }
+
+        /* Create two equal columns that floats next to each other */
+
+        .navbar {
+            line-height: 110px;
+            height: 135px;
+            padding-top: 0;
+            margin-bottom: 130px;
+            background-color: #2d2d30;
+            border: 0;
+            font-size: 55px !important;
+            letter-spacing: 12px;
+            opacity: 0.9;
+            font-family: 'Hind Siliguri', sans-serif';
+
+        }
+
+        #submit {
+            margin: 0 0 1.5% 0;
+            background-color: #d84315;
+        }
+
+        #form {
+            height: 80%;
+            max-width: 52%;
+            margin-top: -5%;
+            opacity: 0.9;
+            background-color: white;
+        }
+
+        #column {
+            padding: 0 20px 0 20px;
+        }
+
+        .resize {
+            padding: 20px;
+        }
+
+        #link {
+            margin: 2%
+        }
+
+        a {
+            color: #d84315;
+        }
+        .container3 img{
+    width: 70%;
+    height: 98%;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header" align="center">
+                <div class="container3">
+                    <div style="text-align: center; display: inline-block;">
+                        <img src="images/Logo3.png" id="logo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <div class="container">
+        <div class="containerTitle"></div>
+    </div> -->
+
+    <!-- Sign up form -->
+    <div class="container" id="form">
+        <div class="row" id="background">
+            <div class="col s6">
+                <p>
+                    <div class="row" id="column">
+                        <div class="input-field col s12">
+                            <input id="username" type="text" class="validate">
+                            <label for="username">Username</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="email" type="text" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <input id="password" type="text" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="organization" type="text" class="validate">
+                            <label for="organization">Organization</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="maincontact" type="text" class="validate">
+                            <label for="maincontact">Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="resize">
+                        <select id="entity">
+                            <option value="" disabled selected>Select Entity</option>
+                            <option value="FP">Food Provider (Grocers, Restaurants, etc.)</option>
+                            <option value="NP">Non-Profit Organization (Soup Kitchens, Charities, etc.)</option>
+                        </select>
+                    </div>
+                </p>
+
+            </div>
+
+            <div class="col s6">
+
+                <p>
+                    <div class="row" id="column">
+                        <div class="input-field col s12">
+                            <input id="address" type="text" class="validate">
+                            <label for="address">Address</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="city" type="text" class="validate">
+                            <label for="city">City</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="state" type="text" class="validate">
+                            <label for="state">State</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="zip_code" type="number" class="validate">
+                            <label for="zip_code">Zip Code</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="enjoy" type="text" class="validate">
+                            <label for="enjoy">Enjoy GiveNGrub!!!!!!</label>
+                        </div>
+                    </div>
+                    <div class="resize" id="blank">
+                        <select id="capacity">
+                            <option value="" disabled selected>Select Capacity</option>
+                            <option value="25">1-25 People</option>
+                            <option value="50">26-50 People</option>
+                            <option value="100">51-100 People</option>
+                        </select>
+                    </div>
+                </p>
+
+
+            </div>
+            <div align="center">
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="submit">Submit
+                    <i class="material-icons right"></i>
+                </button>
+                <div class="row">
+                    <br>
+                    <a id="link" href="signin.html">Already a user? Sign In</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script type="text/javascript" src="js/signup.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAojVYS1ZjEju1PAaGMBUDTfeasKs8JchU&v=3.exp&sensor=false"></script>
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+-->
+</body>
+
+</html>
